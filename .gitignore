@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+# Local build outputs
+vampire_hp_game
+vampire_hp_game.c
+
+# Old/unused local assets
+assets/backup_before_aggressive_clean/
+assets/unused_red_eye.png
+
+# macOS metadata
+.DS_Store
