@@ -218,12 +218,10 @@ class VampireHpGame:
                 if event.key == pygame.K_q:
                     self.paused = True
                     self.hit_started = 0
-                if event.key == pygame.K_v:
+                if event.key in (pygame.K_RETURN, pygame.K_KP_ENTER):
                     self.damage(VIBRATION_DAMAGE)
-                if event.key == pygame.K_l:
-                    self.damage(LIGHT_DAMAGE)
                 if event.key == pygame.K_SPACE:
-                    self.damage(SPACE_DAMAGE)
+                    self.damage(LIGHT_DAMAGE)
                 if event.key == pygame.K_r:
                     self.hp = MAX_HP
                     self.hit_started = 0
@@ -314,7 +312,7 @@ class VampireHpGame:
             self.screen.blit(paused_label, (x + w - 64, y + 9))
 
     def draw_help_overlay(self):
-        lines = ["V: MESH 振動", "L: MESH 明るさ", "Space: ダメージ", "R: リセット", "Q: 停止"]
+        lines = ["Enter: MESH 振動", "Space: MESH 明るさ", "R: リセット", "Q: 停止"]
         line_height = 20
         padding_x = 14
         padding_y = 10
